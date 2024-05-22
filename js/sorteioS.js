@@ -5,10 +5,8 @@ let listaGeral = ["11Centro Farroupilha de Tradições Gaúchas - 4ª RT - Alegr
 let listaFinalC = [];
 let listaFinalG = [];
 
-let i = 0;
 let f = 0;
 let m = 101;
-let n = 1;
 let g = 1;
 
 
@@ -55,23 +53,23 @@ function sorteioBlocoG() {
 
 //EXIBE OS GRUPO SORTEADO NA TABELA
 function exibirBlocosC() {
-    document.getElementById(m).innerHTML = (`${listaFinalC[i].substring(2)}`);
+    document.getElementById(m).innerHTML = (`${listaFinalC[f].substring(2)}`);
     numeroGrupoC();
     animarBolaC();
     m++;
-    i++;
+    f++;
 }
 function exibirBlocosG() {
-    document.getElementById(n).innerHTML = (`${listaFinalG[f].substring(2)}`);
+    document.getElementById(g).innerHTML = (`${listaFinalG[f].substring(2)}`);
     numeroGrupoG();
     animarBolaG();
-    n++;
+    g++;
     f++;
 }
 
 //SUBTRAI E EXIBE O NÚMERO DO GRUPO
 function numeroGrupoC() {
-    let nomeC = listaFinalC[i];
+    let nomeC = listaFinalC[f];
     let numero1C = nomeC[0];
     let numero2C = nomeC[1];
     let numeroC= numero1C+numero2C;
@@ -88,7 +86,6 @@ function numeroGrupoG() {
     else if (g >= 19 && g < 26) {
         sistemaNumeroG("b2", "b3");
     }
-    g++;
 }
 
 //REALIZA A TROCA DE CORES DA BOLA

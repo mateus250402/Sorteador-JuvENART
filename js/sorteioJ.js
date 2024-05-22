@@ -5,12 +5,9 @@ let listaGeral = [" 9 CTG Doze Braças - 29ª RT - Sananduva"," 10DTG Sentinelas
 let listaFinalC = [];
 let listaFinalG = [];
 
-let i = 0;
 let f = 0;
 let m = 101;
-let n = 1;
 let g = 1;
-let h = 1;
 
 
 //REALIZA O SORTEIO EM SI (POSIÇÃO NO ARRAY)
@@ -56,32 +53,31 @@ window.onload = function sorteioSenior() {
 
 //EXIBE OS GRUPO SORTEADO NA TABELA
 function exibirBlocosC() {
-    document.getElementById(m).innerHTML = (`${listaFinalC[i].substring(3)}`);
+    document.getElementById(m).innerHTML = (`${listaFinalC[f].substring(3)}`);
     numeroGrupoC();
     animarBolaC();
     m++;
-    i++;
+    f++;
 }
 function exibirBlocosG() {
-    document.getElementById(n).innerHTML = (`${listaFinalG[f].substring(3)}`);
+    document.getElementById(g).innerHTML = (`${listaFinalG[f].substring(3)}`);
     numeroGrupoG();
     animarBolaG();
-    n++;
     f++;
 }
 
 //SUBTRAI E EXIBE O NÚMERO DO GRUPO
 function numeroGrupoC() {
-    if (h <= 3) {
+    if (g <= 3) {
         sistemaNumeroC("B1");
     }
-    else if (h > 3 && h <= 6) {
+    else if (g > 3 && g <= 6) {
         sistemaNumeroC("B1","B2");
     }
-    else if (h > 6 && h <= 8) {
+    else if (g > 6 && g <= 8) {
         sistemaNumeroC("B2","B3");
     }
-    h++;
+    g++;
 }
 function numeroGrupoG() {
     if (g < 10) {
@@ -145,13 +141,13 @@ function sistemaAnimar(tag) {
 
 //SISTEMA RESPONSÁVEL POR COLOCAR O NÚMERO NA BOLA
 function sistemaNumeroC(tag1, tag2) {
-    let nomeC = listaFinalC[i];
+    let nomeC = listaFinalC[f];
     let numero1C = nomeC[0];
     let numero2C = nomeC[1];
     let numero3C = nomeC[2];
     let numeroC = numero1C+numero2C+numero3C;
 
-    if (h <= 3) {
+    if (g <= 3) {
         document.getElementById(tag1).innerHTML = (`${numeroC}`);
     }
     else {
