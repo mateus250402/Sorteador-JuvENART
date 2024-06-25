@@ -294,8 +294,21 @@ body {
     gap: 0px;
 }
 
-.rodape {
+.rodape__principal {
+    color: var(--cor-fonte-geral);
     padding-left: 1%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    position: absolute;   
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape {
+    color: var(--cor-fonte-geral);
+    padding-left: 1%;
+    padding-top: 2%;
+    padding-bottom: 0.5%;
     position: sticky;   
     bottom: 0;
     width: 100%;
