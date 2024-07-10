@@ -4,6 +4,11 @@ let m = 1001;
 let n = 1;
 let i = 0;
 
+/*esta função alteara para o nome na lista (tendo representada sua posição pela variável 'i') 
+os elementos HTML referentes, as variáveis 'm' e 'n' 
+são referentes aos id desses elementos HTML, os quais estão em PA de razão +1.
+Além disso, adicona a classe correta ao elemento, que antigamente possuia cores alternadas 
+(tal funcionalidade permanece existente - mesmo que inativa - devido à possíveis alterações)*/
 window.onload = function gerarLista() {
     while (i <= lista.length) {
         let nome = document.getElementById(m);
