@@ -3,7 +3,6 @@ import {shuffle} from "../modelos/shuffle.js"
 
 let f = 0;
 let n = 1;
-let g = 1;
 
 //Embaralha a lista
 window.onload = shuffle(lista_geral)
